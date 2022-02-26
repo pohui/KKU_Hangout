@@ -20,7 +20,7 @@ class LogoutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_logout, container, false)
+        return inflater.inflate(R.layout.fragment_nav_logout, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

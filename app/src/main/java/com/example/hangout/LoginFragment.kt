@@ -8,6 +8,7 @@
 //import android.view.View
 //import android.view.ViewGroup
 //import android.widget.Toast
+//import androidx.databinding.DataBindingUtil
 //import androidx.fragment.app.Fragment
 //import com.example.hangout.databinding.ActivityLoginBinding
 //
@@ -22,7 +23,7 @@
 //        inflater: LayoutInflater,
 //        container: ViewGroup?,
 //        savedInstanceState: Bundle?
-//    ): View {
+//    ): View? {
 //        binding = ActivityLoginBinding.inflate(inflater, container, false)
 //        val root: View = binding.root
 //
@@ -67,6 +68,7 @@
 //        var intent:Intent = Intent(now,next)
 //        startActivity(intent)
 //    }
+//
 //
 //    fun addData(KEY_NAME: String, data: String) {
 //        val editor: SharedPreferences.Editor = sharedPre.edit()

@@ -6,21 +6,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.hangout.R
+import com.example.hangout.databinding.FragmentNavAboutBinding
+import com.example.hangout.databinding.FragmentNavHomeBinding
+import com.example.hangout.nav_drawer.home.HomeViewModel
 
 class AboutFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = AboutFragment()
-    }
-
+    private var _binding: FragmentNavAboutBinding? = null
+    private val binding get() = _binding!!
     private lateinit var viewModel: AboutViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_about, container, false)
+//        val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+
+        _binding = FragmentNavAboutBinding.inflate(inflater,container,false)
+        val root: View = binding.root
+
+        binding.txtholder.text = "This is ${binding}"
+
+        return root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

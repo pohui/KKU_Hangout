@@ -9,9 +9,7 @@ import com.example.hangout.databinding.ActivityTestBinding
 class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val binding = ActivityTestBinding.inflate(layoutInflater)
         val binding = ActivityTestBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
         setContentView(binding.root)
 
 

@@ -7,30 +7,30 @@
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.hangout.nav_drawer.profile.ProfileFragment"
+        android:name="com.example.hangout.fragments.nav_drawer.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_nav_profile" />
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.hangout.nav_drawer.home.HomeFragment"
+        android:name="com.example.hangout.fragments.nav_drawer.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_nav_home" />
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.example.hangout.nav_drawer.about.AboutFragment"
+        android:name="com.example.hangout.fragments.nav_drawer.AboutFragment"
         android:label="@string/menu_about"
         tools:layout="@layout/fragment_nav_about" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.hangout.nav_drawer.logout.LogoutFragment"
+        android:name="com.example.hangout.fragments.nav_drawer.LogoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/fragment_nav_logout" />
     <fragment
         android:id="@+id/nav_report"
-        android:name="com.example.hangout.nav_drawer.report.ReportFragment"
+        android:name="com.example.hangout.fragments.nav_drawer.ReportFragment"
         android:label="@string/menu_report"
         tools:layout="@layout/fragment_nav_report" />
 </navigation>

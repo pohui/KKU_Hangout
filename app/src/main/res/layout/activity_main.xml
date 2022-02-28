@@ -8,6 +8,14 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
+    <include
+        android:id="@+id/topheader_and_content"
+        layout="@layout/a_topheader_and_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </include>
+
+<!--    NavigationView must place at buttom to able to interact with it-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -17,11 +25,7 @@
         app:headerLayout="@layout/a_drawer_header_nav"
         app:menu="@menu/drawer"/>
 
-    <include
-        android:id="@+id/topheader"
-        layout="@layout/a_topheader"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

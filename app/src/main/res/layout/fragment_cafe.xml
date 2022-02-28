@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cafe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/txt_CafeName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="LABrary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#A73B24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_CafeName1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/cafe1_pic1" />
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@id/imageView8"
+                            app:layout_constraintTop_toTopOf="@id/imageView8"
+                            app:srcCompat="@drawable/cafe1_pic2" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toEndOf="@id/imageView9"
+                            app:layout_constraintTop_toTopOf="@id/imageView9"
+                            app:srcCompat="@drawable/cafe1_pic3" />
+
+
+                        <Button
+                            android:id="@+id/cafe1_openInMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="66dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="42dp"
+                            android:text="Open in Map"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imageView10"
+                            app:layout_constraintTop_toTopOf="@id/imageView10" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/cafe_linear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/horizontalScrollView"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+                    <TextView
+                        android:id="@+id/cafe1_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/mitr"
+                        android:text="TextView"
+                        android:textColor="#A73B24" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_CafeName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="Huskimo"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#A73B24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cafe_linear1" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView2"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_CafeName2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe201"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/cafe2_pic1" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe202"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe201"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe201"
+                            app:srcCompat="@drawable/cafe2_pic2" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe203"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe202"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe202"
+                            app:srcCompat="@drawable/cafe2_pic3" />
+
+
+                        <Button
+                            android:id="@+id/cafe2_openInMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="66dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="42dp"
+                            android:text="Open in Map"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe203"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe203" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/linear_cafe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/horizontalScrollView2"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2">
+
+                    <TextView
+                        android:id="@+id/cafe2_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/mitr"
+                        android:text="TextView"
+                        android:textColor="#A73B24" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_CafeName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="Dakota Cafe"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#A73B24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_cafe2" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView3"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_CafeName3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe301"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/cafe3_pic1" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe302"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe301"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe301"
+                            app:srcCompat="@drawable/cafe3_pic2" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCafe303"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe302"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe302"
+                            app:srcCompat="@drawable/cafe3_pic3" />
+
+
+                        <Button
+                            android:id="@+id/cafe3_openInMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="66dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="42dp"
+                            android:text="Open in Map"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imageViewCafe303"
+                            app:layout_constraintTop_toTopOf="@id/imageViewCafe303" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/linear_cafe3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/horizontalScrollView3"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3">
+
+                    <TextView
+                        android:id="@+id/cafe3_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/mitr"
+                        android:text="TextView"
+                        android:textColor="#A73B24" />
+
+                    <TextView
+                        android:id="@+id/txtEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    //under linear layout
+</LinearLayout>

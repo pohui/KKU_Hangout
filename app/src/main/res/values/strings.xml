@@ -49,6 +49,13 @@
         cero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
 
     </string>
+    <string name="alertOnExitTXT">Are you sure to close this application?</string>
     <string name="logout_overflow_menu">Logout</string>
+    <string name="txtlogout">Logout</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="clear_the_data">Clear the data</string>
+    <string name="authentication">Authentication</string>
 
 </resources>

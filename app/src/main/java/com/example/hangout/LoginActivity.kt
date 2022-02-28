@@ -4,98 +4,56 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.Window
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.hangout.databinding.ActivityLoginBinding
+import com.example.hangout.data.SharedPerf
+import com.example.hangout.databinding.*
+import kotlinx.coroutines.delay
+import timber.log.Timber
 
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private val PreName = "db"
+    private var binding_nav_header: ADrawerHeaderNavBinding? = null
     lateinit var sharedPre: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPre = getSharedPreferences("data_stored", MODE_PRIVATE)
 
-        sharedPre = this.getSharedPreferences("data_stored", Context.MODE_PRIVATE)
-//        removeData("AlreadyLoggedIn")
-//        clearData()
-//        readData("AlreadyLoggedIn")
-//        readData("Username")
         var username = binding.txtUsername.text
-        var logged_in: String = readData("AlreadyLoggedIn").toString()
-        var logged_in2: String = readData("Username").toString()
-        Toast.makeText(this, "MODE AlreadyLoggedIn: ${logged_in} as ${logged_in2}", Toast.LENGTH_SHORT).show()
+        var logged_in: String? = sharedPre.getString("Username","no user")
+        var rememberMe: Boolean? = sharedPre.getBoolean("RememberMe", false)
 
-        if (logged_in == "yes"){
+        if (sharedPre.contains("Username")){
+            Timber.i("ara : already has USERNAME, login bypassed | sharedPre.contains(\"Username\") = ${sharedPre.contains("Username")}")
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "by Auto Login", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Auto Logged in as ${logged_in}", Toast.LENGTH_SHORT).show()
         }
 
+        binding.txtLoginAlert.visibility = View.GONE
         binding.btnLogin.setOnClickListener {
             if (username.isBlank()) {
-                binding.txtAlert!!.text = ("Please enter the valid username")
-            } else if (username.isNotBlank()) {
-                addData("AlreadyLoggedIn","yes")
-                addData("Username",username.toString())
-                Toast.makeText(this, "Logged in as ${username}, ${readData("AlreadyLoggedIn")}", Toast.LENGTH_SHORT).show()
+                binding.txtLoginAlert.visibility = View.VISIBLE
+                binding.txtLoginAlert.text = "Please enter the valid username"
+//                Toast.makeText(this, "Please enter the valid username", Toast.LENGTH_SHORT).show()
+            } else {
+                val editor: SharedPreferences.Editor = sharedPre.edit()
+                editor.putString("Username",username.toString() )
+                editor.putBoolean("RememberMe", true)
+                editor.commit()
+                Toast.makeText(this, "Logged in as ${username}", Toast.LENGTH_SHORT).show()
                 var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }
-
-//    fun loginPass(username: String) {
-//        var intent = Intent(this, MainActivity::class.java)
-//        startActivity(intent)
-//        addData("AlreadyLoggedIn","yes")
-//        addData("Username","${username}")
-//        Toast.makeText(this, "Logged in as ${username}", Toast.LENGTH_SHORT).show()
-//        finish()
-//    }
-
-    public fun addData(KEY_NAME: String, data: String) {
-        var editor: SharedPreferences.Editor = sharedPre.edit()
-        editor.putString(KEY_NAME, data)
-//        editor.commit()
-        editor.commit()
-    }
-
-    //check for next login
-    public fun readData(KEY_NAME: String): String {
-        var dataA = sharedPre.getString(KEY_NAME, "NO DATA")
-        return dataA.toString()
-    }
-
-    public fun clearData() {
-        var editor: SharedPreferences.Editor = sharedPre.edit()
-        editor.clear()
-        editor.commit()
-    }
-
-    public fun removeData(KEY_NAME: String) {
-        sharedPre = this.getSharedPreferences("data_stored", Context.MODE_PRIVATE)
-        var editor: SharedPreferences.Editor = sharedPre.edit()
-        editor.remove(KEY_NAME)
-        editor.commit()
-    }
-
-    fun logout() {
-        removeData("AlreadyLoggedIn")
-        removeData("Username")
-//        clearData()
-//        var temp = removeData("AlreadyLoggedIn")
-        Toast.makeText(applicationContext, "You're logged out", Toast.LENGTH_SHORT).show()
-//finish()
-//        var intent = Intent(this, LoginActivity::class.java)
-//        startActivity(intent)
-    }
-
 }
 //    Snackbar.make(view,"Logged in as ${username}", Snackbar.LENGTH_LONG).show
 //    lateinit var sharedPre: SharedPreferences

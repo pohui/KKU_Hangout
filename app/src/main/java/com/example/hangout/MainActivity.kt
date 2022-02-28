@@ -41,16 +41,15 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+
         //do FragmentController
         val navController = findNavController(R.id.content_fragment_placeholder) // make R.id.content_fragment_placeholder to be host controller
-        setupActionBarWithNavController(navController, appBarConfiguration) //set it up
-
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_about, R.id.nav_logout, R.id.nav_profile, R.id.nav_report
             ), drawerLayout
-        )
-
+        )//bind nav pages to its configuration
+        setupActionBarWithNavController(navController, appBarConfiguration) //set it up
         navView.setupWithNavController(navController)
 
     }

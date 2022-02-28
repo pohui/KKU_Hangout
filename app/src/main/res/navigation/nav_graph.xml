@@ -33,4 +33,17 @@
         android:name="com.example.hangout.fragments.nav_drawer.ReportFragment"
         android:label="@string/menu_report"
         tools:layout="@layout/fragment_nav_report" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.hangout.LoginActivity"
+        android:label="LoginActivity" />
+    <activity
+        android:id="@+id/welcomeActivity"
+        android:name="com.example.hangout.WelcomeActivity"
+        android:label="WelcomeActivity" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.hangout.MainActivity"
+        android:label="a_topheader_and_content"
+        tools:layout="@layout/a_topheader_and_content" />
 </navigation>

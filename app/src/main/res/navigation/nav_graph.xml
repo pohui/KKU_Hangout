@@ -15,7 +15,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.hangout.fragments.nav_drawer.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_nav_home" />
+        tools:layout="@layout/fragment_nav_home" >
+        <action
+            android:id="@+id/action_nav_home_to_cafeFragment"
+            app:destination="@id/cafeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_about"
@@ -46,4 +50,8 @@
         android:name="com.example.hangout.MainActivity"
         android:label="a_topheader_and_content"
         tools:layout="@layout/a_topheader_and_content" />
+    <fragment
+        android:id="@+id/cafeFragment"
+        android:name="com.example.hangout.fragments.CafeFragment"
+        android:label="CafeFragment" />
 </navigation>

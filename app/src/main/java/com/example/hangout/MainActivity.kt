@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
 //                true
 //            }
             R.id.menuExit ->{
+                //todo: use another function instead, because of can't replace the text
                     val alertOnExit = AlertDialog.Builder(this)
                     alertOnExit.setTitle("EXIT?")
                     alertOnExit.setMessage("Are you sure to close this application?")
@@ -97,7 +98,6 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-    //todo: clear cache/data in setting menu to editor.clear()
     //todo: name on nav
     //todo: list view, search bar
     //todo: report from to google sheet

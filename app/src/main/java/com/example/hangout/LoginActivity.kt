@@ -33,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
             Timber.i("ara : already has USERNAME, login bypassed | sharedPre.contains(\"Username\") = ${sharedPre.contains("Username")}")
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
             Toast.makeText(this, "Auto Logged in as ${logged_in}", Toast.LENGTH_SHORT).show()
         }
 

@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment
 import com.example.hangout.databinding.FragmentSettingsBinding
 
 class SettingsFragment: Fragment() {
-    private var binding: FragmentSettingsBinding = TODO()
+    private lateinit var binding: FragmentSettingsBinding
+    private val bindingB get() = binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,7 +17,9 @@ class SettingsFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSettingsBinding.inflate(inflater,container,false)
+        val root: View = bindingB.root
 
-        return binding.root
+//todo: toggle enable/disable welcome menu
+        return view
     }
 }

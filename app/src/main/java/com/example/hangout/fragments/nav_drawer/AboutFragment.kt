@@ -10,7 +10,7 @@ import com.example.hangout.databinding.FragmentNavAboutBinding
 class AboutFragment : Fragment() {
     private var _binding: FragmentNavAboutBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: AboutViewModel
+//    private lateinit var viewModel: AboutViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +23,7 @@ class AboutFragment : Fragment() {
         val root: View = binding.root
 
         binding.txtholder.text = "This is ${binding}"
+        //todo
 
         return root
     }

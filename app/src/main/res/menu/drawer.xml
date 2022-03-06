@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <!--order list here-->
-    <group android:checkableBehavior="single">
+
+    <group>
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
@@ -22,10 +23,28 @@
             android:id="@+id/nav_report"
             android:icon="@drawable/ic_baseline_bug_report_24"
             android:title="@string/menu_report"></item>
-
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_baseline_login_24"
-            android:title="@string/menu_logout" />
     </group>
+
+    <item
+        android:icon="@drawable/bar"
+        android:title="TODO">
+        <menu>
+            <item
+                android:id="@+id/nav_toggle_darkmode"
+                android:actionLayout="@layout/drawer_switch"
+                android:checkable="true"
+                android:title=""
+                app:actionLayout="@layout/drawer_switch" />
+
+            <item android:title="asd" />
+
+            <item
+                android:id="@+id/nav_btn_logout"
+                android:title=""
+                app:actionLayout="@layout/drawer_button" />
+            />
+
+
+        </menu>
+    </item>
 </menu>

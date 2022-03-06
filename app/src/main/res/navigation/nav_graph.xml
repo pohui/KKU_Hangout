@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_nav_home_to_cafeFragment"
             app:destination="@id/cafeFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
     <fragment
@@ -49,9 +52,13 @@
         android:id="@+id/mainActivity"
         android:name="com.example.hangout.MainActivity"
         android:label="a_topheader_and_content"
-        tools:layout="@layout/a_topheader_and_content" />
+        tools:layout="@layout/activity_main_topheader_and_content" />
     <fragment
         android:id="@+id/cafeFragment"
         android:name="com.example.hangout.fragments.CafeFragment"
         android:label="CafeFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.hangout.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

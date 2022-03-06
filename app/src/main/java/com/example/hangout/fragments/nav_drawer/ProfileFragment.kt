@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import com.example.hangout.R
 
 class ProfileFragment : Fragment() {
-    private lateinit var viewModel: ProfileViewModel
+//    private lateinit var viewModel: ProfileViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //todo
         return inflater.inflate(R.layout.fragment_nav_profile, container, false)
     }
 

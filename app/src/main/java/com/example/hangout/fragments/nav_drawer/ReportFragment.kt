@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import com.example.hangout.R
 
 class ReportFragment : Fragment() {
-    private lateinit var viewModel: ReportViewModel
+//    private lateinit var viewModel: ReportViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //todo
         return inflater.inflate(R.layout.fragment_nav_report, container, false)
     }
 }

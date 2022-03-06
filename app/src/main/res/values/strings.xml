@@ -57,5 +57,8 @@
     <string name="clear_data">Clear Data</string>
     <string name="clear_the_data">Clear the data</string>
     <string name="authentication">Authentication</string>
+    <string name="welcome_screen">Welcome screen</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="login_online">Login Online</string>
 
 </resources>

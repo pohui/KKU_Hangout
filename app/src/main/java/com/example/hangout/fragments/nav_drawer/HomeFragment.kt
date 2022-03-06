@@ -39,7 +39,11 @@ class HomeFragment : Fragment() {
 
 
     binding!!.cafe.setOnClickListener {
+//        view: View -> view.findNavController().navigate(R.id.action_nav_home_to_cafeFragment)
         view?.findNavController()?.navigate(R.id.action_nav_home_to_cafeFragment)
+        /*can't use below this*/
+//        Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_cafeFragment)
+
     }
 
 

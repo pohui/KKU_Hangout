@@ -20,7 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/a_content_placeholder" />
+    <include layout="@layout/activity_main_content_placeholder" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

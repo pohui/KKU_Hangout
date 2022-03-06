@@ -6,10 +6,12 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,6 +19,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.example.hangout.databinding.ActivityMainBinding
+import com.example.hangout.databinding.DrawerHeaderBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,20 +49,27 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.content_fragment_placeholder) // make R.id.content_fragment_placeholder to be host controller
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_about, R.id.nav_logout, R.id.nav_profile, R.id.nav_report
+                R.id.nav_home, R.id.nav_about, R.id.nav_profile, R.id.nav_report
             ), drawerLayout
         )//bind nav pages to its configuration
         setupActionBarWithNavController(navController, appBarConfiguration) //set it up
         navView.setupWithNavController(navController)
 
+        var testsetname: DrawerHeaderBinding? = null
+        testsetname?.textView?.text = "I'm here, in Main activity just scroll down"
+    }
+    /*up button can be pressed*/
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.content_fragment_placeholder)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    /*create options menu*/
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.overflow, menu)
         return true
     }
-
+    /*set items on options menu*/
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menuLogout -> {
@@ -73,6 +83,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
                 true
+            }
+            R.id.menuSettings ->{
+//                view: View -> view.findNavController().navigate(R.id.action_nav_home_to_cafeFragment)
+//            view.findNavController().navigate(R.id.action_nav_home_to_cafeFragment)
+//            Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_cafeFragment)
+            true
             }
 //            R.id.mnuClearData ->{
 //                val editor: SharedPreferences.Editor = sharedPre.edit()
@@ -101,20 +117,7 @@ class MainActivity : AppCompatActivity() {
     //todo: name on nav
     //todo: list view, search bar
     //todo: report from to google sheet
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.content_fragment_placeholder)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
 
-//    fun logout() {
-//
-//        sharedPre = this.getSharedPreferences("data_stored", Context.MODE_PRIVATE)
-//        editor.clear()
-//        editor.commit()
-//        Toast.makeText(this, "You're logged out", Toast.LENGTH_SHORT).show()
-//        finish()
-//        var intent = Intent(this, LoginActivity::class.java)
-//        startActivity(intent)
-//    }
+
 }
 

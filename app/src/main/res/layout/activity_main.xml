@@ -7,22 +7,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:openDrawer="start">
+<!--    android:layout_gravity="right"-->
 
+<!--only one layout can be placed here-->
     <include
         android:id="@+id/topheader_and_content"
-        layout="@layout/a_topheader_and_content"
+        layout="@layout/activity_main_topheader_and_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </include>
 
-<!--    NavigationView must place at buttom to able to interact with it-->
+<!--    NavigationView must place at bottom to able to interact with it-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/a_drawer_header_nav"
+        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer"/>
 
 

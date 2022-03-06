@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.hangout.databinding.FragmentCafeBinding
+import com.example.hangout.databinding.TestFragmentCafeBinding
 
 
 class CafeFragment: Fragment() {
-    private var binding: FragmentCafeBinding? = null
+    private var binding: TestFragmentCafeBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,7 +19,7 @@ class CafeFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentCafeBinding.inflate(inflater,container,false)
+        binding = TestFragmentCafeBinding.inflate(inflater,container,false)
 
         binding!!.cafe1Txt.text = ("ร้านคาเฟ่ขอนแก่น คาเฟ่ใน มข ร้านนี้มีบรรยากาศดี ส่วนใหญ่เป็นคนเข้ามานั่งอ่านหนังสือ ทำงาน มีบริการอาหารจานหลัก" +
                 "ช่วงดึกจะมีแค่ของขนมหวาน เครื่องดื่ม แนะนำชาเขียวปั่น กับชาไทยปั่น รสชาติพอดีไม่หวานมาก " +

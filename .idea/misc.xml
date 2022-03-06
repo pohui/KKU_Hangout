@@ -5,17 +5,29 @@
       <map>
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/a_content_placeholder.xml" value="0.26979166666666665" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/a_drawer_header_nav.xml" value="0.18229166666666666" />
-        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/a_topheader_and_content.xml" value="0.26979166666666665" />
-        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_login.xml" value="0.18541666666666667" />
-        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/a_topheader_and_content.xml" value="0.13058419243986255" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_login_online.xml" value="0.1762917933130699" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/activity_welcome.xml" value="0.2838541666666667" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/drawer_button.xml" value="0.22395833333333334" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/drawer_header.xml" value="0.22395833333333334" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/drawer_switch.xml" value="0.22395833333333334" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_cafe.xml" value="0.2838541666666667" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_mainmenu.xml" value="0.33" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_mainmenu2.xml" value="0.18541666666666667" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_nav_about.xml" value="0.2838541666666667" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_nav_home.xml" value="0.26979166666666665" />
         <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_nav_logout.xml" value="0.2838541666666667" />
-        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_settings.xml" value="0.2838541666666667" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/fragment_settings.xml" value="0.25729166666666664" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/layout_swtch.xml" value="0.25729166666666664" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/mainact_content_placeholder.xml" value="0.3625" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/mainact_topheader_and_content.xml" value="0.1762917933130699" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/recycler_view_items.xml" value="0.3625" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/test_fragment_cafe.xml" value="0.3625" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/layout/todo_details_view.xml" value="0.3625" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/menu/drawer.xml" value="0.3569230769230769" />
+        <entry key="..\:/Codes/AndroidStudioProject/hangout/app/src/main/res/menu/overflow.xml" value="0.33796296296296297" />
         <entry key="..\:/Codes/AndroidStudioProject/kkuhangout/hangout/app/src/main/res/drawable-v24/background_bg.xml" value="0.23" />
         <entry key="..\:/Codes/AndroidStudioProject/kkuhangout/hangout/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.195" />
         <entry key="..\:/Codes/AndroidStudioProject/kkuhangout/hangout/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2285" />

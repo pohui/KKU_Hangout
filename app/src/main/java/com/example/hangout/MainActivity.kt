@@ -16,13 +16,16 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.hangout.databinding.ActivityMainBinding
+import com.example.hangout.databinding.ActivityMainHeaderBinding
 import com.example.hangout.databinding.DrawerHeaderBinding
 import com.google.android.material.navigation.NavigationView
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
-    private var binding_drawer: DrawerHeaderBinding? = null
+    private lateinit var binding_drawer: DrawerHeaderBinding
+    private lateinit var binding_header: ActivityMainHeaderBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: com.example.hangout.databinding.ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     //RWChangeLocalFile
 
@@ -38,7 +41,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.topheaderAndContent.toolbar)
+//        setSupportActionBar(binding.topheaderAndContent.toolbar)
+        setSupportActionBar(binding.header.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -53,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration) //set it up
         navView.setupWithNavController(navController)
 
-        binding_drawer?.usernameDesc?.text = "I'm here, in Main activity just scroll down"
     }
     /*up button can be pressed*/
     override fun onSupportNavigateUp(): Boolean {
@@ -76,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                 editor.remove("BypassWelcomePage")
                 editor.apply()
                 Toast.makeText(this, "You're logged out", Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, WelcomeActivity::class.java)
+                val intent = Intent(this, WelcomeActivity::class.java)
                 startActivity(intent)
                 finish()
                 true
@@ -111,6 +114,14 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("ara : Run 'onResume' in 'MainActivity.kt'")
+//        binding_drawer = DrawerHeaderBinding.inflate(layoutInflater)
+//        binding_drawer.usernameDisplay.text = "I'm here, in Main activity just scroll down"
 
     }
     //todo: name on nav

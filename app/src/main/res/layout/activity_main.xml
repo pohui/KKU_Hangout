@@ -4,22 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!--    android:layout_gravity="right"-->
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
 
-    <include
-        android:id="@+id/topheader_and_content"
-        layout="@layout/activity_main_topheader_and_content"
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/activity_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    </include>
+        <include
+            android:id="@+id/content"
+            layout="@layout/activity_main_content_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:menu="@menu/overflow"
-        android:layout_gravity="right"/>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -28,9 +34,14 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/drawer" />
+        app:dividerInsetEnd="@dimen/activity_horizontal_margin"
+        app:menu="@menu/drawer"/>
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/overflow"
+        android:layout_gravity="end"/>
 
 
 

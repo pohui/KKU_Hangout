@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.nav_drawer.AboutFragment">
 
-    <TextView
-        android:id="@+id/txtholder"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="258dp"
+            android:src="@drawable/coc" />
+
+        <TextView
+            android:id="@+id/pohui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pohui_somnam_633021000_2"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tonkla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/natthaphong_thaboran_633020563_3"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/copyright_all_rights_reserved_2022"
+            android:gravity="bottom"
+            />
+    </LinearLayout>
 
 </FrameLayout>

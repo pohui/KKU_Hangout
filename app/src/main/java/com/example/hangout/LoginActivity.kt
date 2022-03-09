@@ -7,12 +7,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hangout.databinding.ActivityLoginBinding
+import com.example.hangout.databinding.DrawerHeaderBinding
 import timber.log.Timber
 
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private var binding_drawer: DrawerHeaderBinding? = null
     lateinit var sharedPre: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,9 +28,13 @@ class LoginActivity : AppCompatActivity() {
         var logged_in: String? = sharedPre.getString("Username","no user")
         var rememberMe: Boolean? = sharedPre.getBoolean("RememberMe", false)
 
+//        var getUsername = sharedPre.getString("Username","no")
+//        binding_drawer?.usernameDisplay?.text = "getUsername"
+
         if (sharedPre.contains("Username")){
             Timber.i("ara : already has USERNAME, login bypassed | sharedPre.contains(\"Username\") = ${sharedPre.contains("Username")}")
             var intent = Intent(this, MainActivity::class.java)
+
             startActivity(intent)
             finish()
             Toast.makeText(this, "Auto Logged in as $logged_in", Toast.LENGTH_SHORT).show()

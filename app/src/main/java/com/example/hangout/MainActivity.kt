@@ -6,20 +6,17 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.navigation.NavigationView
 import com.example.hangout.databinding.ActivityMainBinding
-import com.example.hangout.databinding.DrawerHeaderBinding
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -55,8 +52,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration) //set it up
         navView.setupWithNavController(navController)
 
-        var testsetname: DrawerHeaderBinding? = null
-        testsetname?.textView?.text = "I'm here, in Main activity just scroll down"
+//        username.textView?.text = "I'm here, in Main activity just scroll down"
     }
     /*up button can be pressed*/
     override fun onSupportNavigateUp(): Boolean {
@@ -113,6 +109,8 @@ class MainActivity : AppCompatActivity() {
                 }
             else -> super.onOptionsItemSelected(item)
         }
+
+
     }
     //todo: name on nav
     //todo: list view, search bar

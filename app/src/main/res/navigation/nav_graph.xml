@@ -31,11 +31,6 @@
         tools:layout="@layout/fragment_nav_about" />
 
     <fragment
-        android:id="@+id/nav_logout"
-        android:name="com.example.hangout.fragments.nav_drawer.LogoutFragment"
-        android:label="@string/menu_logout"
-        tools:layout="@layout/fragment_nav_logout" />
-    <fragment
         android:id="@+id/nav_report"
         android:name="com.example.hangout.fragments.nav_drawer.ReportFragment"
         android:label="@string/menu_report"

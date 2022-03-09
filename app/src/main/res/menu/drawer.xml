@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group>
+    <group
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
@@ -27,7 +28,11 @@
 
     <item
         android:icon="@drawable/bar"
-        android:title="TODO">
+        android:title="TODO"
+        android:visible="false">
+        <!--        todo | if wanna show -->
+<!--        darkmode-->
+<!--        login btn-->
         <menu>
             <item
                 android:id="@+id/nav_toggle_darkmode"

@@ -1,10 +1,10 @@
 package com.example.hangout.fragments.nav_drawer
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.hangout.databinding.FragmentNavAboutBinding
 
 class AboutFragment : Fragment() {
@@ -21,9 +21,6 @@ class AboutFragment : Fragment() {
 
         _binding = FragmentNavAboutBinding.inflate(inflater,container,false)
         val root: View = binding.root
-
-        binding.txtholder.text = "This is ${binding}"
-        //todo
 
         return root
     }

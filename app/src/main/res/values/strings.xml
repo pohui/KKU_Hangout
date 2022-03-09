@@ -60,5 +60,24 @@
     <string name="welcome_screen">Welcome screen</string>
     <string name="dark_mode">Dark mode</string>
     <string name="login_online">Login Online</string>
+    <string name="natthaphong_thaboran_633020563_3">Natthaphong Thaboran 633020563-3</string>
+    <string name="pohui_somnam_633021000_2">Pohui Somnam 633021000-2</string>
+    <string name="copyright_all_rights_reserved_2022">Copyright © All Rights Reserved 2022</string>
+    <string name="title_activity_settings_fragment">SettingsFragment</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

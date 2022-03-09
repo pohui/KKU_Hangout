@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hangout">
         <activity
+            android:name=".SettingsFragment"
+            android:exported="false"
+            android:label="@string/title_activity_settings_fragment" />
+        <activity
             android:name=".LoginOnlineActivity"
             android:exported="false" />
         <activity

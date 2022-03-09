@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.hangout.R
 import com.example.hangout.databinding.FragmentNavHomeBinding
@@ -21,8 +20,8 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+//        val homeViewModel =
+//            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         binding = FragmentNavHomeBinding.inflate(inflater, container, false)
         val root: View = bindingB.root
@@ -45,9 +44,6 @@ class HomeFragment : Fragment() {
 //        Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_cafeFragment)
 
     }
-
-
-
 
         return root
     }

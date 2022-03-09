@@ -16,10 +16,11 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.hangout.databinding.ActivityMainBinding
+import com.example.hangout.databinding.DrawerHeaderBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
-
+    private var binding_drawer: DrawerHeaderBinding? = null
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: com.example.hangout.databinding.ActivityMainBinding
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration) //set it up
         navView.setupWithNavController(navController)
 
-//        username.textView?.text = "I'm here, in Main activity just scroll down"
+        binding_drawer?.usernameDesc?.text = "I'm here, in Main activity just scroll down"
     }
     /*up button can be pressed*/
     override fun onSupportNavigateUp(): Boolean {

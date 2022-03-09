@@ -28,8 +28,8 @@ class LoginActivity : AppCompatActivity() {
         var logged_in: String? = sharedPre.getString("Username","no user")
         var rememberMe: Boolean? = sharedPre.getBoolean("RememberMe", false)
 
-//        var getUsername = sharedPre.getString("Username","no")
-//        binding_drawer?.usernameDisplay?.text = "getUsername"
+        var getUsername = sharedPre.getString("Username","no")
+        binding_drawer?.usernameDisplay?.setText("getUsername")
 
         if (sharedPre.contains("Username")){
             Timber.i("ara : already has USERNAME, login bypassed | sharedPre.contains(\"Username\") = ${sharedPre.contains("Username")}")

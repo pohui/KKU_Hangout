@@ -136,6 +136,10 @@
         <entry key="..\:/Codes/GitHub/kkuhangout/hangout/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Codes/GitHub/kkuhangout/hangout/app/src/main/res/menu/main.xml" value="0.11666666666666667" />
         <entry key="..\:/Users/pohui/StudioProjects/KKU_Hangout/app/src/main/res/layout/drawer_header.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/pohui/StudioProjects/KKU_Hangout/app/src/main/res/layout/fragment_mainmenu.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/pohui/StudioProjects/KKU_Hangout/app/src/main/res/layout/fragment_nav_home.xml" value="0.19375" />
+        <entry key="..\:/Users/pohui/StudioProjects/KKU_Hangout/app/src/main/res/layout/recycler_view_items.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/pohui/StudioProjects/KKU_Hangout/app/src/main/res/layout/recyclerview_items_place.xml" value="0.31666666666666665" />
       </map>
     </option>
   </component>

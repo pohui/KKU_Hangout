@@ -113,7 +113,6 @@ class MainActivity : AppCompatActivity() {
 //                    val dialog : AlertDialog = alertOnExit.create()
 //                    dialog.show()
 
-
                 AlertDialog.Builder(this)
                     .setTitle(getString(R.string.alert_title))
                     .setMessage(getString(R.string.alert_message))

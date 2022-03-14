@@ -14,5 +14,7 @@ class LoginOnlineActivity : AppCompatActivity() {
         binding = ActivityLoginOnlineBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //todo: for online
+
     }
 }

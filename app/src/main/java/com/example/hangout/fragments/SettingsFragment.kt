@@ -1,8 +1,9 @@
-package com.example.hangout
+package com.example.hangout.fragments
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import com.example.hangout.R
 
 class SettingsFragment : AppCompatActivity() {
 

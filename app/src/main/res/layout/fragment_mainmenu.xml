@@ -33,8 +33,9 @@
         android:layout_marginStart="108dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="18dp"
-        android:hint="search"
+        android:hint="@string/search"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,9 +45,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/placeRV"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="108dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:listitem="@layout/recyclerview_items_place"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

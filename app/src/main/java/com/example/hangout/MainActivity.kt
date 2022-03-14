@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
                     .setTitle(getString(R.string.alert_title))
                     .setMessage(getString(R.string.alert_message))
                     .setPositiveButton(getString(R.string.alert_positive)) { dialog, which ->
-                        Toast.makeText(this,getString(R.string.alert_toast), Toast.LENGTH_SHORT).show())
+                        Toast.makeText(this,getString(R.string.alert_toast), Toast.LENGTH_SHORT).show()
                         finish()
                     }
                     .setNegativeButton(getString(R.string.alert_negative)) { dialog, which ->

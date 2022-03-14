@@ -13,8 +13,8 @@ import timber.log.Timber
 
 class Drawer : Fragment(){
     private lateinit var binding :DrawerHeaderBinding
-    private lateinit var binding_btn: DrawerButtonBinding //todo
-    private lateinit var binding_switch: DrawerSwitchBinding //todo
+    private lateinit var binding_btn: DrawerButtonBinding //todo logout btn
+    private lateinit var binding_switch: DrawerSwitchBinding //todo toggle darkmode
     lateinit var sharedPre: SharedPreferences
 
     override fun onCreateView(

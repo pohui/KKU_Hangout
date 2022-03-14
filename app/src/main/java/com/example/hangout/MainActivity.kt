@@ -101,18 +101,7 @@ class MainActivity : AppCompatActivity() {
 //                true
 //            }
             R.id.menuExit -> {
-                //todo: use another function instead, because of can't replace the text
-//                    val alertOnExit = AlertDialog.Builder(this)
-//                    alertOnExit.setTitle("EXIT?")
-//                    alertOnExit.setMessage("Are you sure to close this application?")
-//                    alertOnExit.setPositiveButton("Quit"){ dialog, which ->
-//                        Toast.makeText(this,"Application Terminated!",Toast.LENGTH_SHORT).show()
-//                        finish()
-//                    }
-//                    alertOnExit.setNegativeButton("No"){ dialog, _ ->}
-//                    val dialog : AlertDialog = alertOnExit.create()
-//                    dialog.show()
-
+                //todo: make it work
                 AlertDialog.Builder(this)
                     .setTitle(getString(R.string.alert_title))
                     .setMessage(getString(R.string.alert_message))
@@ -140,7 +129,7 @@ class MainActivity : AppCompatActivity() {
     //todo: name on nav
     //todo: list view, search bar
     //todo: report from to google sheet
-    //
+    //todo: detail view
 
 
 }

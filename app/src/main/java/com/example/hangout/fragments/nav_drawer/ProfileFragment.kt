@@ -14,7 +14,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //todo
+        //todo profile changer
         return inflater.inflate(R.layout.fragment_nav_profile, container, false)
     }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main_topheader_and_content">
+    tools:showIn="@layout/z_junk_activity_main_topheader_and_content">
 
     <fragment
         android:id="@+id/content_fragment_placeholder"

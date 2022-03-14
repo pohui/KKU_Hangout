@@ -15,7 +15,7 @@
         android:id="@+id/nav_home"
         android:name="com.example.hangout.fragments.nav_drawer.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_nav_home" >
+        tools:layout="@layout/x_old_fragment_nav_home" >
         <action
             android:id="@+id/action_nav_home_to_cafeFragment"
             app:destination="@id/cafeFragment" />
@@ -47,7 +47,7 @@
         android:id="@+id/mainActivity"
         android:name="com.example.hangout.MainActivity"
         android:label="a_topheader_and_content"
-        tools:layout="@layout/activity_main_topheader_and_content" />
+        tools:layout="@layout/z_junk_activity_main_topheader_and_content" />
     <fragment
         android:id="@+id/cafeFragment"
         android:name="com.example.hangout.fragments.CafeFragment"

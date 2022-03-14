@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     //RWChangeLocalFile
 
-//    var sharedPre: SharedPreferences = this.getSharedPreferences("data_stored", Context.MODE_PRIVATE)
+    //    var sharedPre: SharedPreferences = this.getSharedPreferences("data_stored", Context.MODE_PRIVATE)
 //    var a = Timber.i("ara : ${sharedPre}")
     lateinit var sharedPre: SharedPreferences
 
@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = binding.navView
 
         //do FragmentController
-        val navController = findNavController(R.id.content_fragment_placeholder) // make R.id.content_fragment_placeholder to be host controller
+        val navController =
+            findNavController(R.id.content_fragment_placeholder) // make R.id.content_fragment_placeholder to be host controller
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_about, R.id.nav_profile, R.id.nav_report
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
     }
+
     /*up button can be pressed*/
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.content_fragment_placeholder)
@@ -69,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.overflow, menu)
         return true
     }
+
     /*set items on options menu*/
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -84,11 +87,11 @@ class MainActivity : AppCompatActivity() {
                 finish()
                 true
             }
-            R.id.menuSettings ->{
+            R.id.menuSettings -> {
 //                view: View -> view.findNavController().navigate(R.id.action_nav_home_to_cafeFragment)
 //            view.findNavController().navigate(R.id.action_nav_home_to_cafeFragment)
 //            Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_cafeFragment)
-            true
+                true
             }
 //            R.id.mnuClearData ->{
 //                val editor: SharedPreferences.Editor = sharedPre.edit()
@@ -97,20 +100,31 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(this, "Data & Cache Cleared", Toast.LENGTH_SHORT).show()
 //                true
 //            }
-            R.id.menuExit ->{
+            R.id.menuExit -> {
                 //todo: use another function instead, because of can't replace the text
-                    val alertOnExit = AlertDialog.Builder(this)
-                    alertOnExit.setTitle("EXIT?")
-                    alertOnExit.setMessage("Are you sure to close this application?")
-                    alertOnExit.setPositiveButton("Quit"){ dialog, which ->
-                        Toast.makeText(this,"Application Terminated!",Toast.LENGTH_SHORT).show()
+//                    val alertOnExit = AlertDialog.Builder(this)
+//                    alertOnExit.setTitle("EXIT?")
+//                    alertOnExit.setMessage("Are you sure to close this application?")
+//                    alertOnExit.setPositiveButton("Quit"){ dialog, which ->
+//                        Toast.makeText(this,"Application Terminated!",Toast.LENGTH_SHORT).show()
+//                        finish()
+//                    }
+//                    alertOnExit.setNegativeButton("No"){ dialog, _ ->}
+//                    val dialog : AlertDialog = alertOnExit.create()
+//                    dialog.show()
+
+
+                AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.alert_title))
+                    .setMessage(getString(R.string.alert_message))
+                    .setPositiveButton(getString(R.string.alert_positive)) { dialog, which ->
+                        Toast.makeText(this,getString(R.string.alert_toast), Toast.LENGTH_SHORT).show())
                         finish()
                     }
-                    alertOnExit.setNegativeButton("No"){ dialog, _ ->}
-                    val dialog : AlertDialog = alertOnExit.create()
-                    dialog.show()
-                    true
-                }
+                    .setNegativeButton(getString(R.string.alert_negative)) { dialog, which ->
+                    }
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
@@ -127,6 +141,7 @@ class MainActivity : AppCompatActivity() {
     //todo: name on nav
     //todo: list view, search bar
     //todo: report from to google sheet
+    //
 
 
 }
